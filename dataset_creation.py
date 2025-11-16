@@ -8,15 +8,15 @@ import random
 
 # ---------- CONFIG: EDIT THESE ----------
 # Your big PGN file:
-PGN_PATH = Path(r"training\utils\LumbrasGigaBase_OTB_2015-2019.pgn")#OAWHDOIAWHDOOHAWHDOIHOIWOAHD
+PGN_PATH = Path(r"Carlsen.pgn")#OAWHDOIAWHDOOHAWHDOIHOIWOAHD
 
 # Where to save the dataset:
-OUT_PATH = Path(r"C:\Users\ethan\Downloads\ChessHacks\e\ChessHacks\my-chesshacks-bot\processed")
+OUT_PATH = Path(r"processed")
 
 # Path to Stockfish binary:
-ENGINE_PATH = r"C:\Users\ethan\Downloads\ChessHacks\e\ChessHacks\my-chesshacks-bot\src\stockfish-windows-x86-64-avx2.exe"  # fix slashes or use raw string
+ENGINE_PATH = r"src\stockfish-windows-x86-64-avx2.exe"  # fix slashes or use raw string
 
-SAMPLE_EVERY = 1      # 1 = every ply, 2 = every second ply, etc.
+SAMPLE_EVERY = 1      # 1 = every ply, 2 = every second ply, etc.x
 MAX_GAMES = 400         # or None for all games
 TIME_LIMIT = 0.05     # seconds per position if DEPTH is None
 DEPTH = 14            # e.g. 16 for fixed depth instead of time
@@ -347,7 +347,7 @@ def main():
                 board.push(move)
                 ply_idx += 1
 
-            if game_count % 100 == 0:
+            if game_count % 1 == 0:
                 print(f"Processed {game_count} games, collected {len(X_list)} positions...")
 
     sf.close()

@@ -31,13 +31,13 @@ from model import ResNet20_PolicyDelta   # <--- UNIFIED MODEL
 
 class Config:
     DATASET_FOLDER = Path(
-        r"C:\Users\ethan\Downloads\ChessHacks\e\ChessHacks\processed"
+        r"C:\Users\liana\Hackathons\ChessHacks\processed"
     )
     OUTPUT_DIR = Path(
-        r"C:\Users\ethan\Downloads\ChessHacks\e\ChessHacks\src\model_save"
+        r"C:\Users\liana\Hackathons\ChessHacks\src\model_save"
     )
 
-    EPOCHS = 10
+    EPOCHS = 20
     BATCH_SIZE = 64
     LR = 1e-3
     NUM_WORKERS = 0
